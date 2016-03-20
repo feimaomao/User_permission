@@ -1,0 +1,46 @@
+{% load staticfiles %}
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>一个页面</title>
+<script type="text/javascript" src="{% static 'js/jquery.min.js' %}"></script>
+<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/custom.css' %}">
+<script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/custom.js' %}"></script>
+</head>
+<body>
+<nav class="navbar navbar-default" role="navigation">
+   <div class="navbar-header a1">
+      <a class="navbar-brand a1" href="#">权限管理</a>
+   </div>
+   <div>
+      <ul class="nav navbar-nav">
+         <li class="li1"><a href="#"><button type="button" class="btn btn-danger" onclick="modifaction()" id='btn1'>保存</button></a></li>
+         <li class="li2 hide"><a href="#"><button type="button" class="btn btn-danger" 
+         onclick="delete11()">删除</button></a></li>
+      </ul>
+   </div>
+</nav>
+    <div class="content">
+        <form class="bs-example bs-example-form" role="form">
+          <div class="input-group input-group-lg code">
+             <span class="input-group-addon">权限代码:</span>
+             <input type="text" class="form-control"  id='codename' onblur="show()">
+          </div>
+          <div class="input-group input-group-lg name">
+             <span class="input-group-addon">权限名称:</span>
+             <input type="text" class="form-control"  id="name" onblur="examine()">
+ 	      </div>
+           <div class="input-group input-group-lg name hide">
+             <span class="input-group-addon">用户分组:</span>
+             <input type="text" class="form-control"  id="content_type_id">
+ 	      </div>
+        </form>
+        <div class='tishi hide' >
+			<p id="ti" class="label label-primary">用户已存在</p>
+		</div>
+    </div>
+</body>
+</html>
