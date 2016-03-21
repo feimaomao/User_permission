@@ -57,7 +57,3 @@ def query():
     c.close()
     return result
 
-# if __name__ =="__main__":
-#     add('test','test',15)
-#     c=query_code('add_user')
-#     print c

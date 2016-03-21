@@ -15,7 +15,7 @@
       type:'GET',
       success:function(data){
         for(var i=0;i<data.length;i++){
-          var a='<tr>'+'<td>'+data[i].user_code+'</td>'+'<td>'+data[i].user_name+'</td>'+'</tr>';
+          var a='<tr>'+'<td>'+data[i].codename+'</td>'+'<td>'+data[i].name+'</td>'+'<td>'+data[i].content_type_id+'</td>'+'</tr>';
           $('tbody').append(a)
         }
       }
@@ -30,6 +30,7 @@
         <tr>
            <th id='code'>权限代码</th>
            <th>权限名称</th>
+           <th>权限分组</th>
         </tr>
      </thead>
 <tbody>
