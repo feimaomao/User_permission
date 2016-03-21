@@ -15,8 +15,7 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from user_promission.views import index,q_code,q_name,u_add,u_updata,u_delete,u_query,u_q
-
+from user_promission.views import index,q_code,q_name,u_add,u_updata,u_delete,u_query
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^user_permission/query_code/$',q_code, name='q_code'),
@@ -25,6 +24,5 @@ urlpatterns = [
     url(r'^user_permission/updata/$',u_updata, name='u_updata'),
     url(r'^user_permission/delete/$',u_delete, name='u_delete'),
     url(r'^query/$',u_query, name='u_query'),
-    url(r'^u_q/$',u_q, name='u_q'),
     url(r'^index/$',index, name='index'),
 ]

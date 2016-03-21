@@ -1,5 +1,5 @@
 #coding:utf-8
-from django.shortcuts import render,HttpResponse
+from django.shortcuts import render,HttpResponse,render_to_response
 from query import query_code,query_name,updata,add,delete,query
 import json
 # 返回权限修改页面
@@ -36,7 +36,5 @@ def u_delete(request):
 # 查询权限
 def u_query(request):
 	user_permission = query()
-	return HttpResponse(json.dumps(user_permission))
-# 删除权限
-def u_q(request):
-	return render(request,'query.html',locals())
+	c = json.dumps(user_permission)
+	return render_to_response('query.html', {'user_permission': c})
